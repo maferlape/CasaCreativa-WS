@@ -4,56 +4,6 @@ const server = express()
 
 const db=require("./db")
 
-// const ideas = [
-//     {
-//         img:"https://image.flaticon.com/icons/svg/2728/2728995.svg",
-//         title:"Cursos de Programacion",
-//         category:"Estudio",
-//         descripcion:" Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     },
-
-//     {
-//         img:"https://www.flaticon.es/premium-icon/icons/svg/2887/2887812.svg",
-//         title:"Ejercicios",
-//         category:"Salud",
-//         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     },
-
-//     {
-//         img:"https://image.flaticon.com/icons/svg/1754/1754634.svg",
-//         title:"Meditación",
-//         category:"Mentalidad",
-//         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     },
-
-//     {
-//         img:"https://image.flaticon.com/icons/svg/2729/2729032.svg",
-//         title:"Kareoke",
-//         category:"Diversión en Família",
-//         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     },
-
-//     {
-//         img:"https://image.flaticon.com/icons/svg/2833/2833844.svg",
-//         title:"Juegos Online",
-//         category:"Distracción",
-//         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     },
-
-//     {
-//         img:"https://www.flaticon.com/premium-icon/icons/svg/1630/1630646.svg",
-//         title:"Recetas de cocina",
-//         category:"Aprender nuevas Recetas",
-//         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-//         url:"https://rocketseat.com.br",
-//     }
-// ]
-
 //configuracion de archivos estaticos (css, src, imagenes)
 server.use(express.static("public"))
 
@@ -172,6 +122,7 @@ server.post("/idea", function(req, res){
 
 
 })
+
 const port = process.env.PORT || 3000
 
 server.listen(port, function(){
