@@ -20,7 +20,7 @@ Abra el terminal de su computadora y realice los siguientes pasos:
 
 ```bash
 #Clone el repositorio
-git clone https://github.com/marialares/CasaCreativa-WS
+git clone https://github.com/maferlape/CasaCreativa-WS
 
 # Entre en el directorio
 cd ws
