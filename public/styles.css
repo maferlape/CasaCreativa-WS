@@ -1,0 +1,342 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600i,700,700i&display=swap";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    background-color:#e5e5e5;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll{
+    overflow: hidden;
+}
+
+a{
+    color: rgb(139, 44, 139);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline; 
+}
+
+#container{
+    width: 90%;
+    max-width: 980px;
+    margin: 40px auto;
+    display: flex;
+}
+
+#intro{
+    width: 600px;
+    margin-right:50px;
+}
+
+main{
+    margin: 32px 0;
+}
+
+main p{
+    margin-top: 12px;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+button{
+    color: rgb(139, 44, 139);
+    border: none;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+.button{
+    background:  rgb(139, 44, 139);
+    color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgb(139,0, 139, 0.50); /*sombreado del boton*/
+    /* position: absolute;
+    text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.button:hover{
+    text-decoration: none;
+    background: white;
+    color: rgb(139, 44, 139);
+}
+
+footer{
+    text-align: center;
+    font-weight: bold ;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color:#777;
+}
+
+footer a{
+    opacity: 0.8;
+}
+
+
+/* footer a:hover{
+    color: rgb(139, 44, 139);
+    font-weight: bold;
+} */
+
+.corazon{
+    color:red;
+}
+
+
+
+.idea{
+    background-color: rgb(194, 145, 194);
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 16px -8px rgb(1, 1,1, 0.1);
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+
+ .idea a{
+   margin-left: 70%;
+}
+
+.idea p{
+    color:#777;
+    font-weight: bold ;
+
+}
+
+p, .descripcion{
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+} 
+
+/* Modal */
+
+#modal{
+    background: rgb(194, 145, 194);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#modal.addScroll{
+    overflow: auto;
+}
+
+#modal .content{
+    margin-top: 4%;
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase; /*Transforma el texto en mayuscula*/
+}
+
+#modal form{
+    width: 80%; 
+    max-width: 800px;
+    margin: 0 auto 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.content form div:nth-child(3),
+ .content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2; /*espande para agrupar hasta la columna 2*/
+}
+
+form input, form textarea{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px rgb(194, 145, 194);
+    outline: none;
+    font-size: 12px;
+    box-sizing: border-box; /*Para que el padding no cambie el tamaño de la caja*/
+    /* margin-top: 10px; */
+}
+
+/* .input-wraper{
+    margin: 8px 0;
+} */ /* el gap hace este trabajo*/
+
+form label{
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.8px;/*espaciamiento entre las letras*/
+}
+
+form a{
+    background: rgb(212, 192, 192);
+    color: white;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    /* margin-top: 32px; */
+    align-self: end; /*justifica a la izquierda del grid*/
+    transition: 400ms;
+}
+
+form a:hover{
+    background: #fff;
+    color: rgb(139, 44, 139);
+    text-decoration: none;
+}
+
+form button{
+ background-color: #ffffff22;
+ width: 100px;
+ height: 30px;
+ border-radius: 6px;
+ cursor: pointer;
+ margin-top: 32px;
+ grid-column: 2; /*lo desplaza a la columna 2 del grid*/
+ justify-self: end; /*justifica a la derecha del grid*/
+ font-family: 'Montserrat', sans-serif;
+ font-size: 12px;
+ transition: 400ms;
+}
+
+form button:hover{
+    background-color: rgb(0, 110, 255);
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide{
+    opacity: 0;/*opaca la tela del formulario*/
+    visibility: hidden; /*permite la transition leve*/
+}
+
+.hide{
+    display: none;
+}
+
+
+
+/* ---Pagina Idea--- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-idea #container{
+    display: block;
+}
+
+.title p, h1{
+ text-align: center;
+}
+
+.title p{
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color:#777;
+}
+
+#page-idea #last-ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#page-idea nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-idea nav li {
+    list-style-type: none;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+#page-idea nav li:last-child {
+    margin-right:0;
+    background-color:  rgba(129, 36, 129, 0.596);
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+#page-idea nav li a{
+    color: #000000;
+    font-weight: bold;
+  }
+#page-idea nav li:last-child a{
+  color: white;
+  text-decoration: none;
+}
+
+#page-idea nav li:last-child:hover{
+    background-color: white;
+    border-radius: 6px;
+}
+
+#page-idea nav li:last-child a:hover{
+    color:  rgb(139, 44, 139);
+    text-decoration: none;
+}
+
+#page-idea main{
+    margin: 15px auto;
+}
+
+#page-idea .idea{
+    margin: 0;
+}
