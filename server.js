@@ -92,36 +92,6 @@ server.post("/", function(req, res){
 
 })
 
-server.post("/idea", function(req, res){
-    // Ingresar datos en la tabla
-    const query = `
-    INSERT INTO ideas(
-        image,
-        title,
-        category,
-        description,
-        link
-    ) VALUES(?,?,?,?,?); 
-    `
-    const values = [
-        req.body.image,
-        req.body.title,
-        req.body.category,
-        req.body.description,
-        req.body.link,
-    ]
-
-    db.run(query, values, function(err) {
-        if (err){
-            console.log(err)
-            return res.send("Error en la base de datos!")
-        }
-
-        return res.redirect("/")
-    })
-
-
-})
 
 const port = process.env.PORT || 3000
 
